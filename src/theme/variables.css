@@ -197,13 +197,13 @@ http://ionicframework.com/docs/theming/ */
    */
 
   .md body {
-    --ion-background-color: #121212;
+    --ion-background-color: #ffffff;
     --ion-background-color-rgb: 18,18,18;
 
-    --ion-text-color: #ffffff;
+    --ion-text-color: #00C49A;
     --ion-text-color-rgb: 255,255,255;
 
-    --ion-border-color: #222222;
+    --ion-border-color: #55505C;
 
     --ion-color-step-50: #1e1e1e;
     --ion-color-step-100: #2a2a2a;

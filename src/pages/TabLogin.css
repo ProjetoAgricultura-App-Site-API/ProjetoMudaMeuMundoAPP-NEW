@@ -1,0 +1,34 @@
+.homeBody{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+Ionlabel, Ioninput{
+    width: 100%;
+    display: block;
+    text-align: left;
+}
+
+/*adiciona a imagem*/
+body{
+    background-image: url(alimentos-organicos.jpg);
+    background-size: cover;
+}
+
+/*COLOCA A CAIXA DE LOGIN A PARTIR DA DIV*/
+#login-container{
+    background-color: #156064;
+    width: 360px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px 30px;
+    margin-top: 40vh;
+    border-radius: 15px;
+    text-align: center;
+}
+
+
+
