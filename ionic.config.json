@@ -1,0 +1,7 @@
+{
+  "name": "Muda Meu Mundo",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}
