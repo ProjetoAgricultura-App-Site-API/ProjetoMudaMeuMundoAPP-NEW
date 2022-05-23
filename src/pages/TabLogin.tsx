@@ -21,20 +21,20 @@ const PageLogin: React.FC = () => {
     <IonPage className='homeBody'>
         <div id='login-container'>
           <form action="">
-            <IonItem>
+            <IonItem class='ionItem'>
                 <IonLabel position="fixed">Login</IonLabel>
                 <IonInput type='text' value={login} placeholder="Digite seu usuário" onIonChange={e => setLogin(e.detail.value!)} clearInput></IonInput>
             </IonItem>
-            <IonItem>
+            <IonItem class='ionItem'>
                 <IonLabel position="fixed">Senha</IonLabel>
                 <IonInput type='password' value={password} placeholder="Digite sua senha" onIonChange={e => setPassword(e.detail.value!)} clearInput></IonInput>
             </IonItem>
-            <IonItem>
+            <IonItem class='ionItem'>
             <a href="#" id="forgot-pass">Esqueceu a senha?</a>
             <div id="register-container">
             </div>
             </IonItem>
-            <IonItem>
+            <IonItem class='ionItem'>
             <a href="#" id="forgot-pass">Registrar</a>
             <div id="register-container">
             </div>

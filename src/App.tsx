@@ -58,8 +58,8 @@ const App: React.FC = () => (
             <Login />
           </Route>
         </IonRouterOutlet>
-
-        <IonTabBar slot="bottom">
+        
+        <IonTabBar id='ion-tab-bar-missed' class='ion-tab-bar' slot="bottom">
           <IonTabButton tab="tab1" href="/tab1">
             <IonIcon icon={paperPlaneOutline} />
             <IonLabel>Vender</IonLabel>

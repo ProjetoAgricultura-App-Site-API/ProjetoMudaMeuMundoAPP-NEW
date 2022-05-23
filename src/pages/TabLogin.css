@@ -4,7 +4,27 @@
     justify-content: center;
 }
 
+.homeBody{
+    --ion-background-color: black;
+    --background: black;
+}
 
+.ionItem {
+    --background: white;
+    border: 1px solid black;
+}
+.ionItem:nth-child(1){
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+}
+.ionItem:nth-child(4){
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+/*#ion-tab-bar-missed{
+    display: none;
+}*/
 
 Ionlabel, Ioninput{
     width: 100%;
@@ -12,11 +32,7 @@ Ionlabel, Ioninput{
     text-align: left;
 }
 
-/*adiciona a imagem*/
-body{
-    background-image: url(alimentos-organicos.jpg);
-    background-size: cover;
-}
+
 
 /*COLOCA A CAIXA DE LOGIN A PARTIR DA DIV*/
 #login-container{
@@ -29,6 +45,3 @@ body{
     border-radius: 15px;
     text-align: center;
 }
-
-
-
