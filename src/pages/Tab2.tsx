@@ -14,12 +14,17 @@ const Tab2: React.FC = () => {
 
       <IonTitle size="large">O que deseja fazer hoje?</IonTitle>
 
+      <IonButton color="success">Ver pedidos do dia</IonButton>
+
+      <img src="https://www.mudameumundo.com.br/wp-content/uploads/2021/02/logo-footer.png"></img>
+      
+      <IonTitle size="small">Lembre-se, você faz um amanhã melhor!</IonTitle>
         <IonHeader collapse="condense">
           <IonToolbar>
             <IonTitle size="large">Tab 2</IonTitle>
           </IonToolbar>
         </IonHeader>
-        <ExploreContainer name="Tab 2 page" />
+
 
       </IonContent>
     </IonPage>
