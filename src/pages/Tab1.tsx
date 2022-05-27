@@ -1,10 +1,16 @@
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
+import { IonContent, IonHeader, IonInput, IonPage, IonSearchbar, IonTitle, IonToolbar } from '@ionic/react';
 import ExploreContainer from '../components/ExploreContainer';
 import './Tab1.css';
 
 const Tab1: React.FC = () => {
   return (
     <IonPage>
+      <div>
+      <IonInput>
+        <IonTitle>Escreva a fruta/leguminosa desejada:</IonTitle>
+      </IonInput>
+      <IonSearchbar showCancelButton='always'></IonSearchbar>
+      </div>
       <IonHeader>
         <IonToolbar>
           <IonTitle>Vender Produtos</IonTitle>
