@@ -3,23 +3,23 @@ import ExploreContainer from '../components/ExploreContainer';
 import './Tab3.css';
 import './TabLogin.css';
 
-const TabRegistro: React.FC = () => {
+const TabTrocaSenha: React.FC = () => {
   return (
     <IonPage>
       <IonHeader>
         <IonToolbar>
-          <IonTitle>Registrar Agricultor</IonTitle>
+          <IonTitle>Mudança de Senha</IonTitle>
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen>
-      <IonTitle size="small">Seja muito bem vindo, Placeholder !</IonTitle>
+      <IonTitle size="large">Alteração de Senha</IonTitle>
       
         <IonHeader collapse="condense">
-          <IonTitle size="small">Seja muito bem vindo, Placeholder !</IonTitle>
+          <IonTitle size="small">Seja muito bem vindo!</IonTitle>
         </IonHeader>
       </IonContent>
     </IonPage>
   );
 };
 
-export default TabRegistro;
+export default TabTrocaSenha;
