@@ -1,47 +1,55 @@
-.homeBody{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.homeBody{
-    --ion-background-color: black;
-    --background: black;
-}
-
-.ionItem {
-    --background: white;
-    border: 1px solid black;
-}
-.ionItem:nth-child(1){
-    border-top-right-radius: 5px;
-    border-top-left-radius: 5px;
-}
-.ionItem:nth-child(4){
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
-}
-
-/*#ion-tab-bar-missed{
-    display: none;
-}*/
-
-Ionlabel, Ioninput{
-    width: 100%;
-    display: block;
-    text-align: left;
-}
 
 
+        #header{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
 
-/*COLOCA A CAIXA DE LOGIN A PARTIR DA DIV*/
-#login-container{
-    background-color: #156064;
-    width: 360px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 20px 30px;
-    margin-top: 40vh;
-    border-radius: 15px;
-    text-align: center;
-}
+        .homeBody{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .homeBody{
+            --ion-background-color: black;
+            --background: black;
+        }
+
+        .ionItem {
+            --background: white;
+            border: 1px solid black;
+        }
+        .ionItem:nth-child(1){
+            border-top-right-radius: 2px;
+            border-top-left-radius: 2px;
+        }
+        .ionItem:nth-child(4){
+            border-bottom-left-radius: 2px;
+            border-bottom-right-radius: 2px;
+        }
+
+        /*#ion-tab-bar-missed{
+            display: none;
+        }*/
+
+        Ionlabel, Ioninput{
+            width: 100%;
+            display: block;
+            text-align: left;
+        }
+
+
+
+        /*COLOCA A CAIXA DE LOGIN A PARTIR DA DIV*/
+        #login-container{
+            background-color: #156064;
+            width: 360px;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 20px 30px;
+            margin-top: 10vh;
+            border-radius: 15px;
+            text-align: center;
+        }
