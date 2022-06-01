@@ -10,14 +10,18 @@ const PageLogin: React.FC = () => {
   const [login, setLogin] = useState('');
   const [password, setPassword] = useState('')
   const [nome, setNome] = useState('')
+  const [sobrenome, setSobrenome] = useState('')
   const [email, setEmail] = useState('')
+  const [telefone, setTelefone] = useState('')
 
   useEffect(() => {
     console.log(`login: ${login}`)
     console.log(`password: ${password}`)
-    console.log(`login: ${nome}`)
-    console.log(`login: ${email}`)
-  }, [login, password,nome,email])
+    console.log(`nome: ${nome}`)
+    console.log(`nome: ${sobrenome}`)
+    console.log(`email: ${email}`)
+    console.log(`telefone: ${telefone}`)
+  }, [login, password,nome,sobrenome,email,telefone])
 
   
   
@@ -32,7 +36,12 @@ const PageLogin: React.FC = () => {
 
         <IonItem class='ionItem'>
           <IonLabel position="fixed">Nome</IonLabel>
-            <IonInput type='text' value={login} placeholder="Digite seu nome." onIonChange={e => setNome(e.detail.value!)} clearInput></IonInput>
+            <IonInput type='text' value={nome} placeholder="Digite seu nome." onIonChange={e => setNome(e.detail.value!)} clearInput></IonInput>
+        </IonItem>
+
+        <IonItem class='ionItem'>
+          <IonLabel position="fixed">Sobrenome</IonLabel>
+            <IonInput type='text' value={sobrenome} placeholder="Digite seu sobrenome." onIonChange={e => setSobrenome(e.detail.value!)} clearInput></IonInput>
         </IonItem>
 
         <IonItem class='ionItem'>
@@ -42,7 +51,12 @@ const PageLogin: React.FC = () => {
 
         <IonItem class='ionItem'>
           <IonLabel position="fixed">E-mail</IonLabel>
-            <IonInput type='text' value={login} placeholder="Digite seu E-mail." onIonChange={e => setEmail(e.detail.value!)} clearInput></IonInput>
+            <IonInput type='text' value={email} placeholder="Digite seu E-mail." onIonChange={e => setEmail(e.detail.value!)} clearInput></IonInput>
+        </IonItem>
+
+        <IonItem class='ionItem'>
+          <IonLabel position="fixed">telefone</IonLabel>
+            <IonInput type='text' value={telefone} placeholder="Digite seu Telefone." onIonChange={e => setTelefone(e.detail.value!)} clearInput></IonInput>
         </IonItem>
 
         <IonButton color="primary" routerLink="/">Registrar</IonButton>
