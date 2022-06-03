@@ -1,22 +1,40 @@
 import { IonButtons, IonContent, IonHeader, IonMenuButton, IonPage, IonTitle, IonToolbar, IonItem, IonInput, IonLabel, IonButton, IonImg } from '@ionic/react';
-import { useParams } from 'react-router';
+import { useParams, useHistory } from 'react-router';
 import ExploreContainer from '../components/ExploreContainer';
 import { useState, useEffect } from 'react';
 import './TabLogin.css';
+import axios from 'axios';
 
 const PageLogin: React.FC = () => {
 
+  const url = "http://localhost:5700/api"
   const { name } = useParams<{ name: string; }>();
   const [login, setLogin] = useState('');
   const [password, setPassword] = useState('')
+  const history = useHistory();
 
-  useEffect(() => {
+  const user = {
+    Login: login,
+    Senha: password
+  }
+
+  var userValid = {};
+
+  var lista_app = [];
+
+
+
+  /*useEffect(() => {
     console.log(`login: ${login}`)
     console.log(`password: ${password}`)
-  }, [login, password])
+  }, [login, password])*/
 
-  
-  
+
+  function entrar(){
+    history.push('/tab2')
+  }
+
+  //history.push("/tab2");
   return (
     <IonPage className='homeBody'>
 
@@ -26,7 +44,7 @@ const PageLogin: React.FC = () => {
       </div>
 
     <div id='login-container'>
-      <form action="">
+      <form onSubmit={entrar}>
         <IonItem class='ionItem'>
           <IonLabel position="fixed">Login</IonLabel>
             <IonInput type='text' value={login} placeholder="Digite seu usuário." onIonChange={e => setLogin(e.detail.value!)} clearInput></IonInput>
@@ -47,7 +65,7 @@ const PageLogin: React.FC = () => {
           <div id="register-container">
           </div>
           </IonItem>
-          <IonButton color="primary" routerLink="/tab2">Logar</IonButton>
+          <IonButton color="primary" type='submit'>Logar</IonButton>
           </form>
         </div>
     </IonPage>
