@@ -1,15 +1,28 @@
 import { IonButtons, IonContent, IonHeader, IonMenuButton, IonPage, IonTitle, IonToolbar, IonItem, IonInput, IonLabel, IonButton, IonImg } from '@ionic/react';
-import { useParams, useHistory } from 'react-router';
+import { useParams, useHistory, useRouteMatch } from 'react-router';
 import ExploreContainer from '../components/ExploreContainer';
 import { useState, useEffect } from 'react';
 import './TabLogin.css';
+import React from 'react';
 import axios from 'axios';
 
+const url = "http://localhost:5700/api"
 
+export function Getusers(){
+  const [listaUser, setListaUser] = React.useState(null);
+
+  React.useEffect(() => {
+    axios.get(url)
+    .then(response => {
+      setListaUser(response.data.users);
+    })
+  }, []);
+
+  return listaUser;
+}
 
 const PageLogin: React.FC = () => {
 
-  const url = "http://localhost:5700/api"
   const { name } = useParams<{ name: string; }>();
   const [login, setLogin] = useState('');
   const [password, setPassword] = useState('')
@@ -21,40 +34,45 @@ const PageLogin: React.FC = () => {
   }
  
 
-  /*useEffect(() => {
-    console.log(`login: ${login}`)
-    console.log(`password: ${password}`)
-  }, [login, password])*/
+  /*React.useEffect(() => {
+    axios.get(url)
+    .then(response => {
+      setListaUser(response.data.users);
+    })
+  }, []);*/
+
+  let lista =  [{
+    Login: '',
+    Senha:'',
+    Nome:'',
+    Sobrenome: '',
+    Email: '',
+    Telefone: ''
+  }];
+
+
+  axios.get(url)
+  .then(response => {
+    var listaUser = response.data.users;
+    lista = listaUser;
+  }).catch(error => error)
 
 
   function entrar(){
-    let userValid = {
-      Login: '',
-      Senha: '',
-      Nome: '',
-      Sobrenome: '',
-      Email: '',
-      Telefone: ''
+    for(var i = 0; i < lista.length; i ++){
+      if(user.Login == lista[i].Login  && user.Senha == lista[i].Senha ){
+        var userlogado = lista[i];
+        alert(JSON.stringify(userlogado))
+        history.push('/tab2')
+      }
     }
-    function getUser(){
-      axios.get(url)
-      .then(response => {
-          var lista_app = response.data.users;
-          for(var i = 0; i < lista_app.length; i++){
-            if(user.Login == lista_app[i].Login && user.Senha == lista_app[i].Senha){
-              userValid = lista_app[i];
-              history.push("/tab2");
-            }
-          }
-      }).catch(error => console.log(error))
-    }
-    getUser();
   }
+  
+
 
   /*history.push('/tab2')*/
   return (
     <IonPage className='homeBody'>
-
 
 
     <div id='login-container'>
