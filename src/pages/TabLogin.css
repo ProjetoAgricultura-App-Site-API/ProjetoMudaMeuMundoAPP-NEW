@@ -1,18 +1,16 @@
-
-
-        #header{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
+    #header{
+        display: block;
+        margin: 0px auto;
+        align-items: center;
+        border-radius: 50%;
+    }
 
         .homeBody{
+            background-image: url(alimentos-organicos.jpg);
+            background-size: cover;
             display: flex;
             align-items: center;
             justify-content: center;
-        }
-
-        .homeBody{
             --ion-background-color: black;
             --background: black;
         }
@@ -30,9 +28,9 @@
             border-bottom-right-radius: 2px;
         }
 
-        /*#ion-tab-bar-missed{
+        #ion-tab-bar-missed{
             display: none;
-        }*/
+        }
 
         Ionlabel, Ioninput{
             width: 100%;
@@ -53,3 +51,5 @@
             border-radius: 15px;
             text-align: center;
         }
+
+        

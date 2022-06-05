@@ -4,7 +4,7 @@ import './Tab2.css';
 
 const Tab2: React.FC = () => {
   return (
-    <IonPage>
+    <IonPage className='paginaInicial'>
       <IonHeader>
         <IonToolbar>
           <IonTitle>Menu</IonTitle>
@@ -18,6 +18,10 @@ const Tab2: React.FC = () => {
 
       <img src="https://www.mudameumundo.com.br/wp-content/uploads/2021/02/logo-footer.png"></img>
       
+      <IonButton color="success" routerLink='/tab1'>Vender</IonButton>
+
+      <IonButton color="warning" routerLink='/tab3'>Perfil do usuário</IonButton>
+
       <IonTitle size="small">Lembre-se, você faz um amanhã melhor!</IonTitle>
         <IonHeader collapse="condense">
           <IonToolbar>
