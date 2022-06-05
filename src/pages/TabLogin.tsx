@@ -5,6 +5,8 @@ import { useState, useEffect } from 'react';
 import './TabLogin.css';
 import axios from 'axios';
 
+
+
 const PageLogin: React.FC = () => {
 
   const url = "http://localhost:5700/api"
@@ -17,12 +19,7 @@ const PageLogin: React.FC = () => {
     Login: login,
     Senha: password
   }
-
-  var userValid = {};
-
-  var lista_app = [];
-
-
+ 
 
   /*useEffect(() => {
     console.log(`login: ${login}`)
@@ -31,10 +28,30 @@ const PageLogin: React.FC = () => {
 
 
   function entrar(){
-    history.push('/tab2')
+    let userValid = {
+      Login: '',
+      Senha: '',
+      Nome: '',
+      Sobrenome: '',
+      Email: '',
+      Telefone: ''
+    }
+    function getUser(){
+      axios.get(url)
+      .then(response => {
+          var lista_app = response.data.users;
+          for(var i = 0; i < lista_app.length; i++){
+            if(user.Login == lista_app[i].Login && user.Senha == lista_app[i].Senha){
+              userValid = lista_app[i];
+              history.push("/tab2");
+            }
+          }
+      }).catch(error => console.log(error))
+    }
+    getUser();
   }
 
-  //history.push("/tab2");
+  /*history.push('/tab2')*/
   return (
     <IonPage className='homeBody'>
 
@@ -50,12 +67,12 @@ const PageLogin: React.FC = () => {
       <form onSubmit={entrar}>
         <IonItem class='ionItem'>
           <IonLabel position="fixed">Login</IonLabel>
-          <IonInput type='text' value={login} placeholder="Digite seu usuário." onIonChange={e => setLogin(e.detail.value!)} clearInput></IonInput>
+          <IonInput type='text' value={login} placeholder="Digite seu usuário." onIonChange={e => setLogin(e.detail.value!)} clearInput required></IonInput>
         </IonItem>
 
         <IonItem class='ionItem'>
           <IonLabel position="fixed">Senha</IonLabel>
-          <IonInput type='password' value={password} placeholder="Digite sua senha." onIonChange={e => setPassword(e.detail.value!)} clearInput></IonInput>
+          <IonInput type='password' value={password} placeholder="Digite sua senha." onIonChange={e => setPassword(e.detail.value!)} clearInput required></IonInput>
         </IonItem>
 
         <IonItem class='ionItem'>
