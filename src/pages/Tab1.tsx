@@ -35,7 +35,7 @@ const Tab1: React.FC = () => {
     setListOfOptions(filteredFruitsList)
   }
 
-  let lista =  {
+  let lista = {
     Login: '',
     Senha:'',
     Nome:'',
@@ -43,32 +43,26 @@ const Tab1: React.FC = () => {
     Email: '',
     Telefone: ''
   };
-
-
   axios.get(urlUsers)
-  .then(response => {
-    var listaUser = response.data.users;
-    for(var i = 0; i < listaUser.length; i++){
-      if(name == listaUser[i].Senha){
-        lista = listaUser[i];
-      }
-    }
-  }).catch(error => error)
-
-  let formProduto = {
-    Nome: lista.Nome,
-    Sobrenome: lista.Sobrenome,
-    Email: lista.Email,
-    Numero: lista.Telefone,
-    Produto: Produto,
-    Quantidade: Quantidade,
-    Data: data
-  }
+    .then(response => {
+    var listaUser = response.data.userlogado;
+    lista = listaUser;
+    }).catch(error => error)
 
 
 
   //AQUI DÁ PRA ADICIONAR O PRODUTO NA API FAZENDO UM POST
   function venderProduto(){
+    let formProduto = {
+      Nome: lista.Nome,
+      Sobrenome: lista.Sobrenome,
+      Email: lista.Email,
+      Numero: lista.Telefone,
+      Produto: Produto,
+      Quantidade: Quantidade,
+      Data: data
+    }
+
     axios.post(urlPRODS, formProduto)
     .then(function (response) {
       console.log(response);

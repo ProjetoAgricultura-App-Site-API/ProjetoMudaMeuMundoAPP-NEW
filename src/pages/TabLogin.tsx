@@ -53,13 +53,14 @@ const PageLogin: React.FC = () => {
     for(var i = 0; i < lista.length; i ++){
       if(user.Login == lista[i].Login  && user.Senha == lista[i].Senha ){
         userlogado = lista[i];
+        axios.put(url, userlogado)
+        .then().catch(error => console.log(error))
         alert(JSON.stringify(userlogado))
         history.push(`/tab2`)
       }
     }
   }
   
-
   /*history.push('/tab2')*/
   return (
     
