@@ -46,14 +46,14 @@ const Tab1: React.FC = () => {
   axios.get(urlUsers)
     .then(response => {
     var listaUser = response.data.userlogado;
-    lista = listaUser;
+    lista = listaUser; //PEGA OS DADOS DO USUÁRIO LOGADO NA API DE USERS DO APP PARA MANDAR PARA A API DE PRODUTOS
     }).catch(error => error)
 
 
 
   //AQUI DÁ PRA ADICIONAR O PRODUTO NA API FAZENDO UM POST
   function venderProduto(){
-    let formProduto = {
+    let formProduto = { //ADICIONA A RESPOSTA DO FORM JUNTO COM DADOS DE USUÁRIO NA API DE PRODUTOS 
       Nome: lista.Nome,
       Sobrenome: lista.Sobrenome,
       Email: lista.Email,
@@ -63,7 +63,7 @@ const Tab1: React.FC = () => {
       Data: data
     }
 
-    axios.post(urlPRODS, formProduto)
+    axios.post(urlPRODS, formProduto) //POST DA API DE PRODUTOS 
     .then(function (response) {
       console.log(response);
     })

@@ -2,7 +2,9 @@ import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonButton } from 
 import ExploreContainer from '../components/ExploreContainer';
 import './Tab3.css';
 import React from 'react';
+import {useHistory} from 'react-router';
 import { useState } from 'react';
+import axios from 'axios';
 
 
 const url = "http://localhost:5700/api"
@@ -10,12 +12,25 @@ const url = "http://localhost:5700/api"
 
 
 const Tab3: React.FC = () => {
-
+  const history = useHistory()
   const [name,setname] = useState('')
   React.useEffect(() => {
     setname(window.location.href.split("?").slice(-1)[0])
   }, [])
 
+  let noUser = {
+    Login: '',
+    Senha:'',
+    Nome:'',
+    Sobrenome: '',
+    Email: '',
+    Telefone: ''
+  };
+  
+  function Sair(){ //APAGA OS DADOS DE QUEM TÁ LOGADO APÓS SAIR DO APP
+    axios.put(url, noUser).then().catch(error => console.log(error))
+    history.push('/');
+  }
 
 
   return (
@@ -33,7 +48,7 @@ const Tab3: React.FC = () => {
         <div id="botoestab3">
         <IonButton color="success" routerLink='/tab2'>Retornar</IonButton>
 
-        <IonButton color="danger" routerLink='/'>Deslogar</IonButton>
+        <IonButton color="danger" onClick={Sair}>Deslogar</IonButton>
         </div>
 
         <div id="footer">

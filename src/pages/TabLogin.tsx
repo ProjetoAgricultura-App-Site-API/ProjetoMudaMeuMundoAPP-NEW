@@ -1,19 +1,17 @@
 import { IonButtons, IonContent, IonHeader, IonMenuButton, IonPage, IonIcon, IonTitle, IonToolbar, IonItem, IonInput, IonLabel, IonButton,} from '@ionic/react';
 import { useParams, useHistory, useRouteMatch } from 'react-router';
-import ExploreContainer from '../components/ExploreContainer';
 import { useState, useEffect } from 'react';
 import './TabLogin.css';
 import React from 'react';
 import axios from 'axios';
-import { phonePortrait } from 'ionicons/icons';
+
 
 
 const url = "http://localhost:5700/api";
-const logado = "http://localhost:5700/logado"
+
 
 const PageLogin: React.FC = () => {
 
-  const { name } = useParams<{ name: string; }>();
   const [login, setLogin] = useState('');
   const [password, setPassword] = useState('')
   const history = useHistory();
@@ -22,14 +20,7 @@ const PageLogin: React.FC = () => {
     Login: login,
     Senha: password
   }
- 
 
-  /*React.useEffect(() => {
-    axios.get(url)
-    .then(response => {
-      setListaUser(response.data.users);
-    })
-  }, []);*/
 
   let lista =  [{
     Login: '',
@@ -53,9 +44,8 @@ const PageLogin: React.FC = () => {
     for(var i = 0; i < lista.length; i ++){
       if(user.Login == lista[i].Login  && user.Senha == lista[i].Senha ){
         userlogado = lista[i];
-        axios.put(url, userlogado)
+        axios.put(url, userlogado) //ATUALIZA O USUÁRIO QUE ESTÁ LOGADO NA API DE USERS 
         .then().catch(error => console.log(error))
-        alert(JSON.stringify(userlogado))
         history.push(`/tab2`)
       }
     }
