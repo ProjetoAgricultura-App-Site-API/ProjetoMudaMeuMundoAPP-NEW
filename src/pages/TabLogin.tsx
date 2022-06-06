@@ -1,10 +1,12 @@
-import { IonButtons, IonContent, IonHeader, IonMenuButton, IonPage, IonTitle, IonToolbar, IonItem, IonInput, IonLabel, IonButton, IonImg } from '@ionic/react';
+import { IonButtons, IonContent, IonHeader, IonMenuButton, IonPage, IonIcon, IonTitle, IonToolbar, IonItem, IonInput, IonLabel, IonButton,} from '@ionic/react';
 import { useParams, useHistory, useRouteMatch } from 'react-router';
 import ExploreContainer from '../components/ExploreContainer';
 import { useState, useEffect } from 'react';
 import './TabLogin.css';
 import React from 'react';
 import axios from 'axios';
+import { phonePortrait } from 'ionicons/icons';
+
 
 const url = "http://localhost:5700/api";
 const logado = "http://localhost:5700/logado"
@@ -90,6 +92,10 @@ const PageLogin: React.FC = () => {
           </IonItem>
           <IonButton color="primary" type='submit'>Logar</IonButton>
         </form>
+
+        <div id="footer">
+          <p>Ecomp 2022.1</p>
+        </div>
     </div>
 
     </IonPage>

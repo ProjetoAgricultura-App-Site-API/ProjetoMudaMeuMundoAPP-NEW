@@ -1,0 +1,23 @@
+#TITULOTAB1{
+    align-items: center;
+    text-align: center;
+    font-size: x-large;
+    padding-bottom: 5px;
+
+}
+
+#botao-retornar{
+    padding-top: 5%;
+    text-align: right;
+
+}
+
+.telasInternas{
+    background-image: url(madeira-maneira.jpg);
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    --ion-background-color: black;
+    --background: black;
+}

@@ -78,21 +78,22 @@ const Tab1: React.FC = () => {
     });
   }
   return (
-    <IonPage>
+    
+    <IonPage className='TelasInternas'>
       <IonHeader>
         <IonToolbar>
-          <IonTitle>Vender Produtos</IonTitle>
+          <IonTitle id="TITULOTAB1">Vender Produtos</IonTitle>
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen>
         <IonHeader collapse="condense">
         </IonHeader>
-        <IonTitle size="large">O que deseja vender hoje?</IonTitle>
+        <IonTitle id="TITULOTAB1" size="large">O que deseja vender hoje?</IonTitle>
       
         <div id='login-container'>
       <form onSubmit={venderProduto}>
         <IonItem class='ionItem'>
-          <IonLabel position="fixed">Produto</IonLabel>
+          <IonLabel position="fixed">Item</IonLabel>
             <input list='browsers' type='text' value={Produto} placeholder="Vender o que?" onChange={e => {setProduto(e.target.value!);procurarProduto(e.target.value)}}required>
             </input>
             <datalist id="browsers">
@@ -112,14 +113,20 @@ const Tab1: React.FC = () => {
           <input type="date" value={data} onChange={(e) => setData(e.target.value)} required></input>
         </IonItem>
 
+        
         <IonButton color="primary" type='submit'>Vender!</IonButton>
       </form>
     </div>
 
 
 
-
+        <div id="botao-retornar">
         <IonButton color="success" routerLink='/tab2'>Retornar</IonButton>
+        </div>
+
+        <div id="footer">
+       <p>Ecomp 2022.1</p>
+      </div>
       </IonContent>
     </IonPage>
   );

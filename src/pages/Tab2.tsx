@@ -13,28 +13,27 @@ const Tab2: React.FC = () => {
     <IonPage className='paginaInicial'>
       <IonHeader>
         <IonToolbar>
-          <IonTitle>Menu</IonTitle>
+          <IonTitle id="TITULOTAB1">Menu</IonTitle>
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen>
 
-      <IonTitle size="large">O que deseja fazer hoje?</IonTitle>
+      <IonTitle id="TITULOTAB2"size="large">O que deseja fazer hoje?</IonTitle>
 
-      <IonButton color="success">Ver pedidos do dia</IonButton>
-
-      <img src="https://www.mudameumundo.com.br/wp-content/uploads/2021/02/logo-footer.png"></img>
+      <img id="ImagemTab2" src="https://www.mudameumundo.com.br/wp-content/uploads/2021/02/logo-footer.png"></img>
       
-      <IonButton color="success" routerLink={`/tab1?${name}`}>Vender</IonButton>
+      <div id="botoes">
+        <IonButton color="success" routerLink={`/tab1?${name}`}>Vender</IonButton>
 
-      <IonButton color="warning" routerLink={`/tab3?${name}`}>Perfil do usuário</IonButton>
+        <IonButton color="warning" routerLink={`/tab3?${name}`}>Perfil</IonButton>
+      </div>
 
-      <IonTitle size="small">Lembre-se, você faz um amanhã melhor!</IonTitle>
-        <IonHeader collapse="condense">
-          <IonToolbar>
-            <IonTitle size="large">Tab 2</IonTitle>
-          </IonToolbar>
-        </IonHeader>
+      <IonTitle id="TituloInferior">Lembre-se, você faz um amanhã melhor!</IonTitle>
 
+
+      <div id="footer">
+       <p>Ecomp 2022.1</p>
+      </div>
 
       </IonContent>
     </IonPage>
