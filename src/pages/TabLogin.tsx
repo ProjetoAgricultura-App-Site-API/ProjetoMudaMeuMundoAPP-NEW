@@ -6,20 +6,8 @@ import './TabLogin.css';
 import React from 'react';
 import axios from 'axios';
 
-const url = "http://localhost:5700/api"
-
-export function Getusers(){
-  const [listaUser, setListaUser] = React.useState(null);
-
-  React.useEffect(() => {
-    axios.get(url)
-    .then(response => {
-      setListaUser(response.data.users);
-    })
-  }, []);
-
-  return listaUser;
-}
+const url = "http://localhost:5700/api";
+const logado = "http://localhost:5700/logado"
 
 const PageLogin: React.FC = () => {
 
@@ -50,18 +38,19 @@ const PageLogin: React.FC = () => {
     Telefone: ''
   }];
 
+  let userlogado; 
 
   axios.get(url)
   .then(response => {
     var listaUser = response.data.users;
     lista = listaUser;
   }).catch(error => error)
-
+  
 
   function entrar(){
     for(var i = 0; i < lista.length; i ++){
       if(user.Login == lista[i].Login  && user.Senha == lista[i].Senha ){
-        var userlogado = lista[i];
+        userlogado = lista[i];
         alert(JSON.stringify(userlogado))
         history.push(`/tab2`)
       }
@@ -69,9 +58,9 @@ const PageLogin: React.FC = () => {
   }
   
 
-
   /*history.push('/tab2')*/
   return (
+    
     <IonPage className='homeBody'>
 
 

@@ -6,14 +6,16 @@ import { useState, useEffect } from 'react';
 import axios from "axios";
 import React from 'react';
 
-const url = "http://localhost:5700/api"
+
 
 const Tab1: React.FC = () => {
-  const url = "http://localhost:5700/api";
+  const urlUsers = "http://localhost:5700/api";
+  const urlPRODS = "http://localhost:5600/api";
   const [Produto, setProduto] = useState('');
   const [Quantidade, setQuantidade] = useState('');
   const [listOfOptions, setListOfOptions]:any = useState([]);
-  const data = document.getElementById("data");
+  const [data, setData] = useState('');
+  const history = useHistory();
   const [name, setname] = useState('')
   React.useEffect(() => {
     setname(window.location.href.split("?").slice(-1)[0])
@@ -32,13 +34,42 @@ const Tab1: React.FC = () => {
     })
     setListOfOptions(filteredFruitsList)
   }
+
+  let lista =  {
+    Login: '',
+    Senha:'',
+    Nome:'',
+    Sobrenome: '',
+    Email: '',
+    Telefone: ''
+  };
+
+
+  axios.get(urlUsers)
+  .then(response => {
+    var listaUser = response.data.users;
+    for(var i = 0; i < listaUser.length; i++){
+      if(name == listaUser[i].Senha){
+        lista = listaUser[i];
+      }
+    }
+  }).catch(error => error)
+
+  let formProduto = {
+    Nome: lista.Nome,
+    Sobrenome: lista.Sobrenome,
+    Email: lista.Email,
+    Numero: lista.Telefone,
+    Produto: Produto,
+    Quantidade: Quantidade,
+    Data: data
+  }
+
+
+
   //AQUI DÁ PRA ADICIONAR O PRODUTO NA API FAZENDO UM POST
   function venderProduto(){
-    axios.post(url, {
-      //aqui ficaria o produto que quer adicionar. Pra filtrar onde adicionar pode usar a variável name (que é o login) da linha 17.
-      firstName: 'Fred',
-      lastName: 'Flintstone'
-    })
+    axios.post(urlPRODS, formProduto)
     .then(function (response) {
       console.log(response);
     })
@@ -59,7 +90,7 @@ const Tab1: React.FC = () => {
         <IonTitle size="large">O que deseja vender hoje?</IonTitle>
       
         <div id='login-container'>
-      <form>
+      <form onSubmit={venderProduto}>
         <IonItem class='ionItem'>
           <IonLabel position="fixed">Produto</IonLabel>
             <input list='browsers' type='text' value={Produto} placeholder="Vender o que?" onChange={e => {setProduto(e.target.value!);procurarProduto(e.target.value)}}required>
@@ -78,11 +109,11 @@ const Tab1: React.FC = () => {
 
         <IonItem class='ionItem'>
           <IonLabel position="fixed">Data</IonLabel>
-          <input type="date" id="data" required></input>
+          <input type="date" value={data} onChange={(e) => setData(e.target.value)} required></input>
         </IonItem>
 
-        <IonButton color="primary" type='submit' onClick={() => { venderProduto() }}>Vender!</IonButton>
-        </form>
+        <IonButton color="primary" type='submit'>Vender!</IonButton>
+      </form>
     </div>
 
 
