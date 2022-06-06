@@ -63,7 +63,7 @@ const PageLogin: React.FC = () => {
       if(user.Login == lista[i].Login  && user.Senha == lista[i].Senha ){
         var userlogado = lista[i];
         alert(JSON.stringify(userlogado))
-        history.push('/tab2')
+        history.push(`/tab2`)
       }
     }
   }
