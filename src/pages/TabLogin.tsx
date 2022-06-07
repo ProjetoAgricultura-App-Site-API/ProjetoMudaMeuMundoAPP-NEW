@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import './TabLogin.css';
 import React from 'react';
 import axios from 'axios';
+import ReactDOM from 'react-dom';
 
 
 
@@ -48,6 +49,10 @@ const PageLogin: React.FC = () => {
         .then().catch(error => console.log(error))
         history.push(`/tab2`)
       }
+      else{
+        const element = <h1 id='texto-erro'>Usuário ou Senha Incorretos</h1>;
+        ReactDOM.render(element, document.getElementById('erro'));
+      }
     }
   }
   
@@ -78,6 +83,7 @@ const PageLogin: React.FC = () => {
           <IonButton color="primary" routerLink="/Registro">Registrar</IonButton>
           </IonItem>
           <IonButton color="primary" type='submit' id=''>Logar</IonButton>
+          <div id='erro'></div>
       </form>
 
       <div id="footer">

@@ -94,9 +94,24 @@ h1{
     text-align: center;
     padding: 10px;
 }
+
+#texto-erro{
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+    color: black;
+}
   
 #botao{
     padding: 5px;
+}
+
+#erro{
+    margin-top: 5%;
+    text-align: center;
+    padding: 3px;
+    border-radius: 4px;
+    display: block;
 }
 
 
