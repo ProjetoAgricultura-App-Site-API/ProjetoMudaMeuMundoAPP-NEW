@@ -76,7 +76,7 @@ const Tab1: React.FC = () => {
     <IonPage>
       <IonHeader>
         <IonToolbar>
-          <IonTitle id="TITULOTAB1">Vender Produtos</IonTitle>
+          <IonTitle id="TITULOTAB2">Vender Produtos</IonTitle>
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen class='homeBody'>
@@ -119,7 +119,7 @@ const Tab1: React.FC = () => {
         </div>
 
         <div id="footer">
-        <p>Ecomp 2022.1</p>
+        <p>Made with love and code! Ecomp 22.1</p>
         </div>
       </IonContent>
     </IonPage>

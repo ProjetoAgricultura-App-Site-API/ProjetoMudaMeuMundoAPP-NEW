@@ -81,7 +81,7 @@ const PageLogin: React.FC = () => {
       </form>
 
       <div id="footer">
-        <p>Ecomp 2022.1</p>
+        <p>Made with love and code! Ecomp 22.1</p>
       </div>
     </div>
 

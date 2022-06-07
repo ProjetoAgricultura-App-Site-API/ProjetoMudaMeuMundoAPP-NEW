@@ -67,6 +67,17 @@ Ionlabel, Ioninput{
     text-align: center;
 }
 
+#menu-container{
+    background-color: #92dbaf;
+    width: 360px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px 30px;
+    margin-top: 5vh;
+    border-radius: 15px;
+    text-align: center;
+}
+
 /*COLOCA A CAIXA DE REGISTRO A PARTIR DA DIV*/
 #register-container{
     background-color: #156064;

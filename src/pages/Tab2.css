@@ -1,21 +1,23 @@
 #ImagemTab2{
     display: block;
-    margin: 0px auto;
+    margin: 10px auto;
     align-items: center;
+    border-color: #28ba62;
+
 }
 
 #TITULOTAB2{
     align-items: center;
     text-align: center;
-    font-size: x-large;
+    font-size:x-large;
     padding-bottom: 5px;
+    color: teal;
 
 }
 
 #botoes{
-    padding-left:24%;
-    padding-right:24%;
 
+    text-align: center;
     justify-content: center;
 }
 
@@ -23,7 +25,7 @@
     padding-top: 5%;
     font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     text-align: center;
-    font-size:small;
+    font-size:medium;
 
 }
 
