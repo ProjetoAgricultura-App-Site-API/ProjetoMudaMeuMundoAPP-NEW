@@ -82,22 +82,22 @@ const Tab3: React.FC = () => {
 
             <IonItem class='ionItem'>
               <IonLabel position="fixed">Nome:</IonLabel>
-                <p>User.Nome</p> 
-            </IonItem>
-
-            <IonItem class='ionItem'>
-              <IonLabel position="fixed">Sobrenome:</IonLabel>
                 <p>{lista.Nome}</p> 
             </IonItem>
 
             <IonItem class='ionItem'>
+              <IonLabel position="fixed">Sobrenome:</IonLabel>
+                <p>{lista.Sobrenome}</p> 
+            </IonItem>
+
+            <IonItem class='ionItem'>
               <IonLabel position="fixed">Email:</IonLabel>
-              <p>User.Email</p> 
+              <p>{lista.Email}</p> 
             </IonItem>
 
             <IonItem class='ionItem'>
               <IonLabel position="fixed">Numero:</IonLabel>
-              <p>User.Numero</p> 
+              <p>{lista.Telefone}</p> 
             </IonItem>
 
             
