@@ -18,6 +18,25 @@ const Tab3: React.FC = () => {
     setname(window.location.href.split("?").slice(-1)[0])
   }, [])
 
+
+
+/*
+  function puxaDados(){
+    const url = "http://localhost:5700/api";
+    let login = document.getElementById('Login');
+    let nome = document.getElementById('Nome');
+    let sobrenome = document.getElementById('Sobrenome');
+    let email = document.getElementById('Email');
+
+    let req = {
+      Login: login.value,
+      Nome: nome.value,
+      Sobrenome: sobrenome.value,
+      Email: email.value,
+  }
+  }
+*/
+
   let noUser = {
     Login: '',
     Senha:'',
@@ -50,32 +69,34 @@ const Tab3: React.FC = () => {
 
             <IonItem class='ionItem'>
               <IonLabel position="fixed">Nome:</IonLabel>
-                <p>Teste</p> 
+                <p>User.Nome</p> 
+            </IonItem>
+
+            <IonItem class='ionItem'>
+              <IonLabel position="fixed">Sobrenome:</IonLabel>
+                <p>User.Nome</p> 
             </IonItem>
 
             <IonItem class='ionItem'>
               <IonLabel position="fixed">Email:</IonLabel>
-              <p>Teste</p> 
+              <p>User.Email</p> 
             </IonItem>
 
             <IonItem class='ionItem'>
               <IonLabel position="fixed">Numero:</IonLabel>
-              <p>Teste</p> 
+              <p>User.Numero</p> 
             </IonItem>
 
             
             <div id="botoestab3">
-              <IonButton color="danger" onClick={Sair}>Deslogar</IonButton>       
+              <IonButton color="danger" onClick={Sair}>Deslogar</IonButton>
+
+              <IonButton color="success" routerLink='/tab2'>Retornar</IonButton>
+     
             </div>
 
         </div>
-
-
-
-        <div id="botao-retornar">
-          <IonButton color="success" routerLink='/tab2'>Retornar</IonButton>
-        </div>
-
+        
         <div id="footer">
         <p>Made with love and code! Ecomp 22.1</p>
         </div>
