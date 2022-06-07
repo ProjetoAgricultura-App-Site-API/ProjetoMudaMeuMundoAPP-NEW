@@ -39,3 +39,31 @@
     text-align: center;
     font-size:larger;
 }
+
+#botaoinicio{
+    width: 100px;
+    height: 100px;
+    margin-right: 20%;
+    margin-top: 5%;
+}
+
+#botaoinicio2{
+    width: 100px;
+    height: 100px;
+    margin-right: 5%;
+    margin-top: 5%;
+}
+
+#titulobotao1{
+    font-size: 15px;
+    font-weight: bold;
+    margin-right: 59%;
+    margin-top: 2%;
+}
+
+#titulobotao2{
+    font-size: 15px;
+    font-weight: bold;
+    margin-left: 50%;
+    margin-top: -16%;
+}

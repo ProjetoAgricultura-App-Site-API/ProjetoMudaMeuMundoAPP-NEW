@@ -25,9 +25,15 @@ const Tab2: React.FC = () => {
           <img id="ImagemTab2" src="https://www.mudameumundo.com.br/wp-content/uploads/2021/02/logo-footer.png"></img>
 
           <div id="botoes">
-            <IonButton color="success" routerLink={`/tab1?${name}`}>Vender</IonButton>
-            <IonButton color="warning" routerLink={`/tab3?${name}`}>Perfil</IonButton>
+            <IonButton color="success" id='botaoinicio' routerLink={`/tab1?${name}`}>
+              <img src="https://cdn-icons-png.flaticon.com/128/1077/1077976.png" id='imagem'/>
+            </IonButton>
+            <IonButton color="warning" id='botaoinicio2' routerLink={`/tab3?${name}`}>
+              <img src="https://cdn-icons-png.flaticon.com/128/1077/1077063.png"/>
+            </IonButton>
           </div>
+          <h1 id='titulobotao1'>VENDER</h1>
+          <h1 id='titulobotao2'>PERFIL</h1>
 
           <IonTitle id="TituloInferior">Você faz um amanhã melhor!</IonTitle>
 
