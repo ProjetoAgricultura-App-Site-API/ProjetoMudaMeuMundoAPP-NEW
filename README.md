@@ -7,7 +7,7 @@ e
 
 COMO FUNCIONA?
 
-# Backend-e-Front-PC
+# NOVO APP E SITE MUDA MEU MUNDO!
 INSTRUÇÕES PARA FUNCIONAMENTO ADEQUADO!
 
 Antes de tudo, devemos rodar as APIS necessárias para o funcionamento adequado de toda a estrutura.
