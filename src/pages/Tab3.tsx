@@ -1,15 +1,24 @@
 import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonButton,IonItem,IonLabel ,IonInput } from '@ionic/react';
-import ExploreContainer from '../components/ExploreContainer';
 import './Tab3.css';
 import React from 'react';
 import {useHistory} from 'react-router';
 import { useState } from 'react';
 import axios from 'axios';
-import { response } from 'express';
 
 
 const url = "http://localhost:5700/api"
-
+let lista = {
+  Login: 'Login',
+  Senha:'Senha',
+  Nome: 'Nome',
+  Sobrenome: 'Sobrenome',
+  Email: 'Email',
+  Telefone: 'Telefone'
+}
+axios.get(url)
+.then(response => { //PUXA DADOS DO USUÁRIO LOGADO E ESCREVE NA TELA DE PERFIL 
+  lista = response.data.userlogado;
+}).catch(error => console.log(error))
 
 
 const Tab3: React.FC = () => {
@@ -19,36 +28,6 @@ const Tab3: React.FC = () => {
     setname(window.location.href.split("?").slice(-1)[0])
   }, [])
 
-  let lista = {
-    Login: 'Login',
-    Senha:'Senha',
-    Nome: 'Nome',
-    Sobrenome: 'Sobrenome',
-    Email: 'Email',
-    Telefone: 'Telefone'
-  }
-  axios.get(url)
-  .then(response => {
-    lista = response.data.userlogado;
-    return lista
-  }).catch(error => console.log(error))
-
-/*
-  function puxaDados(){
-    const url = "http://localhost:5700/api";
-    let login = document.getElementById('Login');
-    let nome = document.getElementById('Nome');
-    let sobrenome = document.getElementById('Sobrenome');
-    let email = document.getElementById('Email');
-
-    let req = {
-      Login: login.value,
-      Nome: nome.value,
-      Sobrenome: sobrenome.value,
-      Email: email.value,
-  }
-  }
-*/
 
   let noUser = {
     Login: '',
