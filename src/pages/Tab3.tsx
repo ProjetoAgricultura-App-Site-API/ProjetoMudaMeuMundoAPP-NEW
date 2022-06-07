@@ -40,8 +40,8 @@ const Tab3: React.FC = () => {
           <IonTitle id="TITULOTAB1">Perfil do Agricultor</IonTitle>
         </IonToolbar>
       </IonHeader>
-      <IonContent fullscreen>
-      <IonTitle id="TITULOTAB3"> Olá, {name} !</IonTitle>
+      <IonContent fullscreen class='homeBody'>
+        <IonTitle id="TITULOTAB3"> Olá, {name} !</IonTitle>
         <IonHeader collapse="condense">
         </IonHeader>
 
@@ -52,8 +52,8 @@ const Tab3: React.FC = () => {
         </div>
 
         <div id="footer">
-       <p>Ecomp 2022.1</p>
-      </div>
+          <p>Ecomp 2022.1</p>
+        </div>
       </IonContent>
     </IonPage>
 

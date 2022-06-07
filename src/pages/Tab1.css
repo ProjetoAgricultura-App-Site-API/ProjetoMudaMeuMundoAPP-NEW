@@ -7,16 +7,9 @@
 }
 
 #botao-retornar{
-    padding-top: 5%;
+    padding-top: 7%;
+    margin-right: 15%;
     text-align: right;
-}
-
-.TelasInternas{
-    background-image: url(madeira-maneira.jpg);
-    background-size: cover;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 .ionItem {

@@ -78,11 +78,11 @@ const PageLogin: React.FC = () => {
           <IonButton color="primary" routerLink="/Registro">Registrar</IonButton>
           </IonItem>
           <IonButton color="primary" type='submit' id=''>Logar</IonButton>
-        </form>
+      </form>
 
-        <div id="footer">
-          <p>Ecomp 2022.1</p>
-        </div>
+      <div id="footer">
+        <p>Ecomp 2022.1</p>
+      </div>
     </div>
 
     </IonPage>

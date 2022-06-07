@@ -21,8 +21,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    --ion-background-color: black;
-    --background: black;
+    --background: url(madeira-maneira.jpg);
+    --background-size: cover;
 }
 
 .ionItem {
@@ -87,6 +87,7 @@ h1{
 #botao{
     padding: 5px;
 }
+
 
 
         

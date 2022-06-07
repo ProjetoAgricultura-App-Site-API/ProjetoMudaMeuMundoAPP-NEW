@@ -79,7 +79,7 @@ const Tab1: React.FC = () => {
           <IonTitle id="TITULOTAB1">Vender Produtos</IonTitle>
         </IonToolbar>
       </IonHeader>
-      <IonContent fullscreen class='TelasInternas'>
+      <IonContent fullscreen class='homeBody'>
         <IonHeader collapse="condense">
         </IonHeader>
       

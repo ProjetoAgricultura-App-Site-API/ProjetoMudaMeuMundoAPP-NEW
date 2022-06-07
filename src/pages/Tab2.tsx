@@ -16,24 +16,24 @@ const Tab2: React.FC = () => {
           <IonTitle id="TITULOTAB1">Menu</IonTitle>
         </IonToolbar>
       </IonHeader>
-      <IonContent fullscreen>
+      <IonContent fullscreen class = 'homeBody'>
 
-      <IonTitle id="TITULOTAB2"size="large">O que deseja fazer hoje?</IonTitle>
+        <IonTitle id="TITULOTAB2"size="large">O que deseja fazer hoje?</IonTitle>
 
-      <img id="ImagemTab2" src="https://www.mudameumundo.com.br/wp-content/uploads/2021/02/logo-footer.png"></img>
-      
-      <div id="botoes">
-        <IonButton color="success" routerLink={`/tab1?${name}`}>Vender</IonButton>
+        <img id="ImagemTab2" src="https://www.mudameumundo.com.br/wp-content/uploads/2021/02/logo-footer.png"></img>
+        
+        <div id="botoes">
+          <IonButton color="success" routerLink={`/tab1?${name}`}>Vender</IonButton>
 
-        <IonButton color="warning" routerLink={`/tab3?${name}`}>Perfil</IonButton>
-      </div>
+          <IonButton color="warning" routerLink={`/tab3?${name}`}>Perfil</IonButton>
+        </div>
 
-      <IonTitle id="TituloInferior">Lembre-se, você faz um amanhã melhor!</IonTitle>
+        <IonTitle id="TituloInferior">Lembre-se, você faz um amanhã melhor!</IonTitle>
 
 
-      <div id="footer">
-       <p>Ecomp 2022.1</p>
-      </div>
+        <div id="footer">
+        <p>Ecomp 2022.1</p>
+        </div>
 
       </IonContent>
     </IonPage>
