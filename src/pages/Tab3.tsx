@@ -5,6 +5,7 @@ import React from 'react';
 import {useHistory} from 'react-router';
 import { useState } from 'react';
 import axios from 'axios';
+import { response } from 'express';
 
 
 const url = "http://localhost:5700/api"
@@ -18,7 +19,19 @@ const Tab3: React.FC = () => {
     setname(window.location.href.split("?").slice(-1)[0])
   }, [])
 
-
+  let lista = {
+    Login: 'Login',
+    Senha:'Senha',
+    Nome: 'Nome',
+    Sobrenome: 'Sobrenome',
+    Email: 'Email',
+    Telefone: 'Telefone'
+  }
+  axios.get(url)
+  .then(response => {
+    lista = response.data.userlogado;
+    return lista
+  }).catch(error => console.log(error))
 
 /*
   function puxaDados(){
@@ -74,7 +87,7 @@ const Tab3: React.FC = () => {
 
             <IonItem class='ionItem'>
               <IonLabel position="fixed">Sobrenome:</IonLabel>
-                <p>User.Nome</p> 
+                <p>{lista.Nome}</p> 
             </IonItem>
 
             <IonItem class='ionItem'>
