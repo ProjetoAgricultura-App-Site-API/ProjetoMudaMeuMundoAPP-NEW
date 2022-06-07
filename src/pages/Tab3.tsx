@@ -89,7 +89,7 @@ const Tab3: React.FC = () => {
 
             
             <div id="botoestab3">
-              <IonButton color="danger" onClick={Sair}>Deslogar</IonButton>
+              <IonButton color="danger" id='botaodeslog' onClick={Sair}>Deslogar</IonButton>
 
               <IonButton color="success" routerLink='/tab2'>Retornar</IonButton>
      
