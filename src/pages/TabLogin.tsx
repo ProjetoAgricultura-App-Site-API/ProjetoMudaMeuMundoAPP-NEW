@@ -32,7 +32,14 @@ const PageLogin: React.FC = () => {
     Telefone: ''
   }];
 
-  let userlogado; 
+  let userlogado = {
+    Login: '',
+    Senha:'',
+    Nome:'',
+    Sobrenome: '',
+    Email: '',
+    Telefone: ''
+  }; 
 
   axios.get(url)
   .then(response => {
@@ -47,12 +54,14 @@ const PageLogin: React.FC = () => {
         userlogado = lista[i];
         axios.put(url, userlogado) //ATUALIZA O USUÁRIO QUE ESTÁ LOGADO NA API DE USERS 
         .then().catch(error => console.log(error))
-        history.push(`/tab2`)
       }
-      else{
-        const element = <h1 id='texto-erro'>Usuário ou Senha Incorretos</h1>;
-        ReactDOM.render(element, document.getElementById('erro'));
-      }
+    }
+    if(userlogado.Login == user.Login && userlogado.Senha == user.Senha){
+      history.push("/tab2");
+    }
+    else{
+      const element = <h1 id='texto-erro'>Usuário ou Senha Incorretos</h1>;
+      ReactDOM.render(element, document.getElementById('erro'));
     }
   }
   
