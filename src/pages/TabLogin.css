@@ -1,56 +1,95 @@
-    #header{
-        display: block;
-        margin: 0px auto;
-        align-items: center;
-        border-radius: 50%;
-    }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Helvetica;
+    color: #fff;
+    border: none;
+}
 
-        .homeBody{
-            background-image: url(alimentos-organicos.jpg);
-            background-size: cover;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            --ion-background-color: black;
-            --background: black;
-        }
+#header{
+    display: block;
+    margin: 0px auto;
+    align-items: center;
+    border-radius: 50%;
+    padding: 10px;
+}
 
-        .ionItem {
-            --background: white;
-            border: 1px solid black;
-        }
-        .ionItem:nth-child(1){
-            border-top-right-radius: 2px;
-            border-top-left-radius: 2px;
-        }
-        .ionItem:nth-child(4){
-            border-bottom-left-radius: 2px;
-            border-bottom-right-radius: 2px;
-        }
+.homeBody{
+    background-image: url(alimentos-organicos.jpg);
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    --ion-background-color: black;
+    --background: black;
+}
 
-        #ion-tab-bar-missed{
-            display: none;
-        }
+.ionItem {
+    --background: #156064;
+    border: 1px solid black;
+    border-bottom: 2px solid #323232;
+    padding: 0.5px;
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+.ionItem:nth-child(1){
+    border-top-right-radius: 2px;
+    border-top-left-radius: 2px;
+}
 
-        Ionlabel, Ioninput{
-            width: 100%;
-            display: block;
-            text-align: left;
-        }
+.ionItem:nth-child(4){
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+}
+
+#ion-tab-bar-missed{
+    display: none;
+}
+
+Ionlabel, Ioninput{
+    width: 100%;
+    display: block;
+    text-align: left;
+}
 
 
 
-        /*COLOCA A CAIXA DE LOGIN A PARTIR DA DIV*/
-        #login-container{
-            background-color: #156064;
-            width: 360px;
-            margin-left: auto;
-            margin-right: auto;
-            padding: 20px 30px;
-            margin-top: 10vh;
-            border-radius: 15px;
-            text-align: center;
-        }
+/*COLOCA A CAIXA DE LOGIN A PARTIR DA DIV*/
+#login-container{
+    background-color: #156064;
+    width: 360px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px 30px;
+    margin-top: 5vh;
+    border-radius: 15px;
+    text-align: center;
+}
+
+/*COLOCA A CAIXA DE REGISTRO A PARTIR DA DIV*/
+#register-container{
+    background-color: #156064;
+    width: 360px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px 30px;
+    margin-top: 10vh;
+    border-radius: 15px;
+    text-align: center;
+}
+
+h1{
+    text-align: center;
+    padding: 10px;
+}
+  
+#botao{
+    padding: 5px;
+}
+
+
+
 
 
         

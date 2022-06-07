@@ -56,7 +56,8 @@ const PageLogin: React.FC = () => {
   
   return (
     <IonPage className='homeBody'>
-    <div id='login-container'>
+    <div id = "register-container">
+      <h1>CADASTRE-SE</h1>
       <form onSubmit={registrar}>
         <IonItem class='ionItem'>
           <IonLabel position="fixed">Login</IonLabel>
@@ -79,12 +80,12 @@ const PageLogin: React.FC = () => {
         </IonItem>
 
         <IonItem class='ionItem'>
-          <IonLabel position="fixed">E-mail</IonLabel>
-            <IonInput type='text' value={email} placeholder="Digite seu E-mail." onIonChange={e => setEmail(e.detail.value!)} clearInput required></IonInput>
+          <IonLabel position="fixed">Email</IonLabel>
+            <IonInput type='email' value={email} placeholder="Digite seu E-mail." onIonChange={e => setEmail(e.detail.value!)} clearInput required></IonInput>
         </IonItem>
 
         <IonItem class='ionItem'>
-          <IonLabel position="fixed">telefone</IonLabel>
+          <IonLabel position="fixed">Telefone</IonLabel>
             <IonInput type='text' value={telefone} placeholder="Digite seu Telefone." onIonChange={e => setTelefone(e.detail.value!)} clearInput required></IonInput>
         </IonItem>
 

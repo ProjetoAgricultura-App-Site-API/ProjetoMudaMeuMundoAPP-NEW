@@ -74,14 +74,10 @@ const PageLogin: React.FC = () => {
           <IonLabel position="fixed">Senha</IonLabel>
           <IonInput type='password' value={password} placeholder="Digite sua senha." onIonChange={e => setPassword(e.detail.value!)} clearInput required></IonInput>
         </IonItem>
-
-        <IonItem class='ionItem'>
-        <IonButton color="primary" routerLink="/Senha">Esqueceu a senha?</IonButton>
-          </IonItem>
           <IonItem class='ionItem'>
           <IonButton color="primary" routerLink="/Registro">Registrar</IonButton>
           </IonItem>
-          <IonButton color="primary" type='submit'>Logar</IonButton>
+          <IonButton color="primary" type='submit' id=''>Logar</IonButton>
         </form>
 
         <div id="footer">
