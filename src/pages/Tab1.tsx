@@ -73,44 +73,44 @@ const Tab1: React.FC = () => {
   }
   return (
     
-    <IonPage id='telas'>
+    <IonPage>
       <IonHeader>
         <IonToolbar>
           <IonTitle id="TITULOTAB1">Vender Produtos</IonTitle>
         </IonToolbar>
       </IonHeader>
-      <IonContent fullscreen>
+      <IonContent fullscreen class='TelasInternas'>
         <IonHeader collapse="condense">
         </IonHeader>
       
-      <div id='login-container'>
-        <img src="https://storage.googleapis.com/cubo-platform.appspot.com/startups/1603118064847-5jkf0ghb.png" id='header' width={180} height={180}/>
-        <form onSubmit={venderProduto}>
-          <IonItem class='ionItem'>
-            <IonLabel position="fixed">Item</IonLabel>
-              <input list='browsers' type='text' value={Produto} placeholder="Vender o que?" onChange={e => {setProduto(e.target.value!);procurarProduto(e.target.value)}}required>
-              </input>
-              <datalist id="browsers">
-                {listOfOptions.map((value: string, index: number) => {
-                  return <option value={`${value}`}></option>
-                })}
-              </datalist>
-          </IonItem>
+        <div id='login-container'>
+          <img src="https://storage.googleapis.com/cubo-platform.appspot.com/startups/1603118064847-5jkf0ghb.png" id='header' width={180} height={180}/>
+          <form onSubmit={venderProduto}>
+            <IonItem class='ionItem'>
+              <IonLabel position="fixed">Item</IonLabel>
+                <input list='browsers' type='text' value={Produto} placeholder="Vender o que?" onChange={e => {setProduto(e.target.value!);procurarProduto(e.target.value)}}required>
+                </input>
+                <datalist id="browsers">
+                  {listOfOptions.map((value: string, index: number) => {
+                    return <option value={`${value}`}></option>
+                  })}
+                </datalist>
+            </IonItem>
 
-          <IonItem class='ionItem'>
-            <IonLabel position="fixed">Quantidade</IonLabel>
+            <IonItem class='ionItem'>
+              <IonLabel position="fixed">Quantidade</IonLabel>
               <IonInput type='text' value={Quantidade} placeholder="Digite em KG." onIonChange={e => setQuantidade(e.detail.value!)} clearInput required></IonInput>
-          </IonItem>
+            </IonItem>
 
-          <IonItem class='ionItem'>
-            <IonLabel position="fixed">Data</IonLabel>
-            <input type="date" value={data} onChange={(e) => setData(e.target.value)} required></input>
-          </IonItem>
+            <IonItem class='ionItem'>
+              <IonLabel position="fixed">Data</IonLabel>
+              <input type="date" value={data} onChange={(e) => setData(e.target.value)} required></input>
+            </IonItem>
 
-          
-          <IonButton color="primary" type='submit'>Vender!</IonButton>
-        </form>
-      </div>
+            
+            <IonButton color="primary" type='submit'>Vender!</IonButton>
+          </form>
+        </div>
 
 
 
@@ -119,8 +119,8 @@ const Tab1: React.FC = () => {
         </div>
 
         <div id="footer">
-       <p>Ecomp 2022.1</p>
-      </div>
+        <p>Ecomp 2022.1</p>
+        </div>
       </IonContent>
     </IonPage>
   );
