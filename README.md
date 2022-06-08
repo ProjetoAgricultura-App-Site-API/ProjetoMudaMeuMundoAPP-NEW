@@ -8,15 +8,8 @@ e
 COMO FUNCIONA?
 
 # NOVO APP E SITE MUDA MEU MUNDO!
-INSTRUÇÕES PARA FUNCIONAMENTO ADEQUADO!
-
-Antes de tudo, devemos rodar as APIS necessárias para o funcionamento adequado de toda a estrutura.
-API 1(app):"Backend-e-front-PC/APP_API" "npm install" e dar "npm start" no prompt de comando.
-abrindo, então, um localhost no endereço 5700. (http://localhost:5700/api)
-
 API 2(app):"Backend-e-front-PC/API_PROD" "npm install" e dar "npm start" no prompt de comando.
 abrindo, então, um localhost no endereço 5600. (http://localhost:5600/api)
-
 API 3(pc):"Backend-e-front-PC/API_SITE" ""npm install" e dar "npm start" no prompt de comando.
 abrindo, então, um localhost no endereço 5500. (http://localhost:5500/api)
 
@@ -46,7 +39,7 @@ Com isso, apertamos o botão de "VENDER!" e pronto, Seus produtos e suas informa
 -PARA O SITE:
 Basta abrir o arquivo "Index.html" localizado em "Backend-e-front-PC/SITE MMM".
 
-Na tela inicial você verá uma página de login para entrada no sistema, basta logar com email e senha ou fazer um novo registro, 
+Na tela inicial você verá uma página de login para entrada no sistema, basta logar com eamil e senha ou fazer um novo registro, 
 seus dados serão enviados para o servidor e você irá logar tranquilamente!!!
 
 Após logar, o usuário será lançado na tela de início que possui opções para navegar até "Minha Conta", "Mensagens" ou simplesmente o botão sair do sistema
@@ -66,3 +59,11 @@ Caso não haja resposta, um alerta é mostrado na tela indicado que não houve r
 (MINHA CONTA)
 
 Na aba minha conta estarão listados todos os dados do usuário que logou no sistema!
+
+(VENDAS DO DIA)
+
+Na aba vendas do dia, você verá todos os produtos que foram cadastrados nesse dia em específico!
+
+(SAIR)
+
+O botão SAIR, apaga os dados do usuário logado da sessão e o redireciona para a página de login!!!
