@@ -8,6 +8,11 @@ e
 COMO FUNCIONA?
 
 # NOVO APP E SITE MUDA MEU MUNDO!
+INSTRUÇÕES PARA FUNCIONAMENTO ADEQUADO!
+
+Antes de tudo, devemos rodar as APIS necessárias para o funcionamento adequado de toda a estrutura.
+API 1(app):"Backend-e-front-PC/APP_API" "npm install" e dar "npm start" no prompt de comando.
+abrindo, então, um localhost no endereço 5700. (http://localhost:5700/api)
 API 2(app):"Backend-e-front-PC/API_PROD" "npm install" e dar "npm start" no prompt de comando.
 abrindo, então, um localhost no endereço 5600. (http://localhost:5600/api)
 API 3(pc):"Backend-e-front-PC/API_SITE" ""npm install" e dar "npm start" no prompt de comando.
